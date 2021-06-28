@@ -218,6 +218,7 @@ void calcFingerprint(const ROMol &mol, unsigned int radius,
                  nbrs.begin();
              it != nbrs.end(); ++it) {
           // add the contribution to the new invariant:
+          std::cout << invar <<","<< it;
           gboost::hash_combine(invar, *it);
 
           // std::cerr<<"     "<<atomIdx<<": "<<it->first<<" "<<it->second<<" ->
